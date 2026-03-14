@@ -168,9 +168,10 @@ export default function App() {
             {/* Profile Card Header */}
             <section className="relative overflow-hidden border border-green-500/30 rounded-lg bg-zinc-900/40 backdrop-blur-md">
               {/* Card Decoration */}
-              <div className="absolute top-0 right-0 p-2 text-[10px] text-green-500/30 font-mono select-none">
+              <div className="absolute top-0 right-0 p-2 text-[9px] text-green-500/30 font-mono select-none text-right">
                 ID: 0x882A_AJ <br/>
-                AUTH: ROOT_LEVEL_7
+                AUTH: ROOT_LEVEL_7 <br/>
+                SESSION: {new Date().toLocaleTimeString()}
               </div>
               <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-green-500/20 to-transparent"></div>
               
@@ -222,6 +223,19 @@ export default function App() {
                     <div className="flex flex-col p-2 border border-red-500/20 bg-red-500/5 rounded col-span-2 sm:col-span-1">
                       <span className="text-[9px] text-zinc-500 uppercase">Access</span>
                       <span className="text-xs text-red-400 font-bold">ROOT_ADMIN_PRIV</span>
+                    </div>
+                  </div>
+
+                  {/* Skill / Progress Bars */}
+                  <div className="space-y-3 max-w-md mx-auto md:mx-0 pt-2">
+                    <div className="space-y-1">
+                      <div className="flex justify-between text-[9px] text-zinc-500 uppercase">
+                        <span>System Access Level</span>
+                        <span className="text-green-500">85%</span>
+                      </div>
+                      <div className="h-1 w-full bg-zinc-800 rounded-full overflow-hidden">
+                        <div className="h-full bg-green-500 w-[85%] shadow-[0_0_10px_rgba(0,255,0,0.5)]"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
